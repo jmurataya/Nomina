@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B6B72A3D-E3CB-4BC5-8403-F7ACB068ADB4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Nomina</RootNamespace>
+    <AssemblyName>Nomina</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Printing.v12.2.Core, Version=12.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v12.2, Version=12.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.AuditTrail.v12.2, Version=12.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Persistent.Base.v12.2, Version=12.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Persistent.BaseImpl.v12.2, Version=12.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v12.2, Version=12.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v12.2, Version=12.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v12.2, Version=12.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v12.2, Version=12.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v12.2, Version=12.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v12.2, Version=12.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v12.2, Version=12.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Concepto.cs" />
+    <Compile Include="ConceptoDetalle.cs" />
+    <Compile Include="Deduccion.cs" />
+    <Compile Include="Departamento.cs" />
+    <Compile Include="Empleado.cs" />
+    <Compile Include="FrmAuditoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAuditoria.Designer.cs">
+      <DependentUpon>FrmAuditoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConcepto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConcepto.Designer.cs">
+      <DependentUpon>FrmConcepto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCrearConcepto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCrearConcepto.Designer.cs">
+      <DependentUpon>FrmCrearConcepto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCrearCuentaContable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCrearCuentaContable.Designer.cs">
+      <DependentUpon>FrmCrearCuentaContable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCrearDeduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCrearDeduccion.Designer.cs">
+      <DependentUpon>FrmCrearDeduccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCrearDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCrearDepartamento.Designer.cs">
+      <DependentUpon>FrmCrearDepartamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCrearEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCrearEmpleado.Designer.cs">
+      <DependentUpon>FrmCrearEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCrearGrupoEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCrearGrupoEmpleado.Designer.cs">
+      <DependentUpon>FrmCrearGrupoEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCrearImpuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCrearImpuesto.Designer.cs">
+      <DependentUpon>FrmCrearImpuesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCrearPercepcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCrearPercepcion.Designer.cs">
+      <DependentUpon>FrmCrearPercepcion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCrearPuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCrearPuesto.Designer.cs">
+      <DependentUpon>FrmCrearPuesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCrearSubsidio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCrearSubsidio.Designer.cs">
+      <DependentUpon>FrmCrearSubsidio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CuentaContable.cs" />
+    <Compile Include="FrmCrearTipoEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCrearTipoEmpleado.Designer.cs">
+      <DependentUpon>FrmCrearTipoEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCrearTipoNomina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCrearTipoNomina.Designer.cs">
+      <DependentUpon>FrmCrearTipoNomina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCuentaContable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCuentaContable.Designer.cs">
+      <DependentUpon>FrmCuentaContable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDepartamento.Designer.cs">
+      <DependentUpon>FrmDepartamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCrearPercepcionBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCrearPercepcionBase.Designer.cs">
+      <DependentUpon>FrmCrearPercepcionBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEmpleado.Designer.cs">
+      <DependentUpon>FrmEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGrupoEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGrupoEmpleado.Designer.cs">
+      <DependentUpon>FrmGrupoEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPercepcionBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPercepcionBase.Designer.cs">
+      <DependentUpon>FrmPercepcionBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPuesto.Designer.cs">
+      <DependentUpon>FrmPuesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSubsidio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSubsidio.Designer.cs">
+      <DependentUpon>FrmSubsidio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTipoEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTipoEmpleado.Designer.cs">
+      <DependentUpon>FrmTipoEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTipoNomina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTipoNomina.Designer.cs">
+      <DependentUpon>FrmTipoNomina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GrupoEmpleado.cs" />
+    <Compile Include="Impuesto.cs" />
+    <Compile Include="Percepcion.cs" />
+    <Compile Include="PercepcionBase.cs" />
+    <Compile Include="Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FrmImpuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmImpuesto.Designer.cs">
+      <DependentUpon>FrmImpuesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Puesto.cs" />
+    <Compile Include="Subsidio.cs" />
+    <Compile Include="TipoEmpleado.cs" />
+    <Compile Include="TipoNomina.cs" />
+    <EmbeddedResource Include="FrmAuditoria.resx">
+      <DependentUpon>FrmAuditoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCrearDeduccion.resx">
+      <DependentUpon>FrmCrearDeduccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCrearEmpleado.resx">
+      <DependentUpon>FrmCrearEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCrearGrupoEmpleado.resx">
+      <DependentUpon>FrmCrearGrupoEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCrearPercepcion.resx">
+      <DependentUpon>FrmCrearPercepcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCrearPercepcionBase.resx">
+      <DependentUpon>FrmCrearPercepcionBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConcepto.resx">
+      <DependentUpon>FrmConcepto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCrearConcepto.resx">
+      <DependentUpon>FrmCrearConcepto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCrearCuentaContable.resx">
+      <DependentUpon>FrmCrearCuentaContable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCrearDepartamento.resx">
+      <DependentUpon>FrmCrearDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCrearImpuesto.resx">
+      <DependentUpon>FrmCrearImpuesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCrearPuesto.resx">
+      <DependentUpon>FrmCrearPuesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCrearSubsidio.resx">
+      <DependentUpon>FrmCrearSubsidio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCrearTipoEmpleado.resx">
+      <DependentUpon>FrmCrearTipoEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCrearTipoNomina.resx">
+      <DependentUpon>FrmCrearTipoNomina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCuentaContable.resx">
+      <DependentUpon>FrmCuentaContable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDepartamento.resx">
+      <DependentUpon>FrmDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEmpleado.resx">
+      <DependentUpon>FrmEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGrupoEmpleado.resx">
+      <DependentUpon>FrmGrupoEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPercepcionBase.resx">
+      <DependentUpon>FrmPercepcionBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPuesto.resx">
+      <DependentUpon>FrmPuesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSubsidio.resx">
+      <DependentUpon>FrmSubsidio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTipoEmpleado.resx">
+      <DependentUpon>FrmTipoEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTipoNomina.resx">
+      <DependentUpon>FrmTipoNomina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="FrmImpuesto.resx">
+      <DependentUpon>FrmImpuesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\app-edit_32x32-32.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\file-del_32x32-32.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\file-new_32x32-32.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\People.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
